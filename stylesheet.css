@@ -1,0 +1,74 @@
+﻿
+:root {
+    --main-text-color: #f9f9f9;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'bebas neue';
+    background-color: #292F32;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-areas:
+        "nav"
+        "content";           
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+}
+
+
+.nav-bar {
+    grid-area: nav;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 11%;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav-bar, a:link {
+    color: #ffffff;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+.nav-bar, a:hover {
+    color: #ff9354;
+    text-decoration: underline 2px; 
+}
+
+.nav-bar, a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-bar, a:visited {
+    color: #ffffff;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+.content{
+    grid-area: content;
+    display:flex;
+    justify-self: center;
+}
+
+.resume {
+    width: 1275px;
+    height: 1650px;
+    justify-self:center;
+}
+

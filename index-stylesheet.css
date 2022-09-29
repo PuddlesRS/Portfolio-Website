@@ -1,0 +1,91 @@
+﻿
+:root {
+    --main-text-color: #f9f9f9;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'bebas neue';
+    background: radial-gradient(circle, rgba(47,51,59,1) 0%, rgba(33,35,38,1) 10%);
+    background-image: url("index-back.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-areas:
+        "nav"
+        "empty"
+        "name"
+        "sub-name"
+        "empty2";
+    grid-template-rows: 10% 35% 10% 10% 35%;
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-content: center;
+    height:100%;
+    margin: 0;
+}
+
+h1, h2 {
+    color: var(--main-text-color);
+    text-align: center;
+}
+
+.main-header {
+    grid-area: name;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0px;
+    font-size: 7vw;
+    padding: 0;
+}
+
+.sub-header {
+    grid-area: sub-name;
+    display: flex;
+    height: 100%;
+    font-weight: lighter;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-size: 40px;
+}
+
+.nav-bar {
+    grid-area: nav;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 11%;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav-bar, a:link {
+    color: #ffffff;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+.nav-bar, a:hover {
+    color: #ff9354;
+    text-decoration: underline 2px; 
+}
+
+.nav-bar, a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-bar, a:visited {
+    color: #ffffff;
+    font-size: 35px;
+    text-decoration: none;
+}
