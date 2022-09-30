@@ -5,13 +5,13 @@
 
 html {
     height: 100%;
+    width: 100%;
+    overflow-y: scroll;
 }
 
 body {
     font-family: 'bebas neue';
     background-color: #292F32;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     display: grid;
     grid-template-areas:
         "nav"
@@ -69,6 +69,6 @@ body {
 .resume {
     width: 1275px;
     height: 1650px;
-    justify-self:center;
+    justify-self: center;
 }
 
