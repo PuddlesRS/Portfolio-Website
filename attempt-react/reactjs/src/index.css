@@ -1,0 +1,98 @@
+:root {
+    --main-text-color: #f9f9f9;
+}
+html {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+@font-face {
+    font-family: "sourcesansprosemibold";
+    src: local("sourcesansprosemibold"), 
+        url('./Fonts/SourceSansPro-SemiBold.ttf') format('truetype');
+    
+}
+
+body {
+    font-family: 'sourcesansprosemibold';
+    background-image: url(images/index-back.jpg);
+    height: 100%;
+    margin: 0;
+}
+
+
+h1, h2 {
+    color: var(--main-text-color);
+    text-align: center;
+}
+
+.index-grid-container {
+    display: grid;
+    grid-template-areas: "nav" "content";
+    grid-template-rows: 1fr 9fr;
+    grid-template-columns: 1fr;
+    height: 95vh;
+    align-content:center;
+    justify-content:center;
+}
+
+.Navbar, ul {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 95%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.Navbar, rs {
+}
+
+.Navbar, a:link {
+    color: #ffffff;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+.Navbar, a:hover {
+    color: #ff9354;
+    text-decoration: underline 2px;
+}
+
+.Navbar, a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.Navbar, a:visited {
+    color: #ffffff;
+    font-size: 35px;
+    text-decoration: none;
+}
+
+.IndexTitle, h1 {
+    margin: 0px;
+    font-size: 7vw;
+    padding: 0;
+}
+
+.IndexTitle, h2 {
+    font-weight: lighter;
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+    font-size: 40px;
+}
+
+.title-container{
+    grid-area: content;
+    align-self:center;
+}
+
