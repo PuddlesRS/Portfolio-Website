@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
     "\\src",
-    "\\src\\Fonts"
+    "\\src\\Components",
+    "\\src\\images"
   ],
-  "SelectedNode": "\\src\\IndexTitle.js",
+  "SelectedNode": "\\src\\Components\\ProjectsGrid.js",
   "PreviewInSolutionExplorer": false
 }
