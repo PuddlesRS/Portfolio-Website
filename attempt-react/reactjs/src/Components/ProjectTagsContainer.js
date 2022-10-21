@@ -1,4 +1,9 @@
 import React from 'react';
+import
+    {
+        BrowserRouter as Router,
+        Link
+    } from "react-router-dom";
 
 
 function ProjectTagsContainer({ menuItem })
@@ -8,13 +13,15 @@ function ProjectTagsContainer({ menuItem })
             {
                 menuItem.map((item) =>
                 {
-                    return <div className="item-con" key={item.id}>
-                        <div className="item-container">
-                            <img src={item.image} alt="" />
-                            <h2>{item.title}</h2>
-                            <p>{item.description}</p>
+                    return <Link to={{ pathname: item.link }} target="_blank" >
+                        <div className="item-con" key={item.id}>
+                            <div className="item-container">
+                                <img src={item.image} alt="" />
+                                <h2>{item.title}</h2>
+                                <p>{item.text}</p>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 })
             }
         </div>

@@ -28,14 +28,6 @@ function ProjectGrid()
 
     return (
         <div className="App">
-
-            <div className="title">
-                <h1>
-                    Portfolio
-                    <span> Filter</span>
-                </h1>
-            </div>
-
             <ToggleButtons button={buttons} filter={filter} />
             <ProjectTagsContainer menuItem={menuItem} />
 

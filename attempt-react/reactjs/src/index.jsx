@@ -7,6 +7,7 @@ import './Fonts/SourceSansPro-SemiBold.ttf';
 import IndexGrid from "./Components/IndexGrid.js";
 import ResumeGrid from "./Components/ResumeGrid.js";
 import ProjectGrid from './Components/ProjectsGrid.js';
+import AboutMeGrid from './Components/AboutMeGrid.js';
 
 export default function App() {
 return (
@@ -16,7 +17,7 @@ return (
                 <Route index element={<IndexGrid />} />
                 <Route path="projects" element={<ProjectGrid />} />
                 < Route path="resume" element={<ResumeGrid />} />
-                <Route path="about-me" element={""} />
+                <Route path="about-me" element={<AboutMeGrid  />} />
                 <Route path="*" element={"" } />
              </Route>
         </Routes>

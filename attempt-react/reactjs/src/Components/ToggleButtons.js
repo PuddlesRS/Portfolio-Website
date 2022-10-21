@@ -16,7 +16,6 @@ function ToggleButtons({ button, filter })
             {
                 button.map((category, i) =>
                 {
-                    //use button.active in CSS to change active colors
                     return <button type="button" onClick={() => filter(category) } className="toggle-button ">
                         {category}
                     </button>
