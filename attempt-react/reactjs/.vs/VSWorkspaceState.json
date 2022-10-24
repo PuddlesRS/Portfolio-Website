@@ -4,8 +4,9 @@
     "\\public",
     "\\src",
     "\\src\\Components",
-    "\\src\\images"
+    "\\src\\images",
+    "\\src\\Pages"
   ],
-  "SelectedNode": "\\src\\images\\index-back.jpg",
+  "SelectedNode": "\\src\\Components\\ProjectsData.js",
   "PreviewInSolutionExplorer": false
 }

@@ -4,7 +4,9 @@ import resume from "../images/resume.jpg";
 function ResumeDownload()
 {
     return (
-        <a href={resume} download="Ryan-Smith-Resume" className="resume-download-container"><button className="resume-download">Download</button></a>
+        <a href={resume} download="Ryan-Smith-Resume" className="resume-download-container">
+            <button className="buttons">Download</button>
+        </a>
     );
 };
 

@@ -1,3 +1,7 @@
+import '../images/superBuddyBall';
+
+//figure out how to import images directly into this file and use the import as a reference for the item.image prop
+
 export default [
     {
         id:1,
@@ -5,7 +9,8 @@ export default [
         category:"C#/Unity 3D",
         link:"./SuperBuddyBall",
         title:"Super Buddy Ball",
-        text:"A ball rolling game made to emulate 'Super Monkey Ball's' unique camera movements",
+        text: "A ball rolling game made to emulate 'Super Monkey Ball's' unique camera movements",
+        image: "./images/superBuddyBall.jpg"
     },
     {
         id: 2,

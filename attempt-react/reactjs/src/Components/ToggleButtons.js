@@ -12,11 +12,11 @@ function ToggleButtons({ button, filter })
     }
 
     return (
-        <div className="buttons">
+        <div className="toggle-container">
             {
                 button.map((category, i) =>
                 {
-                    return <button type="button" onClick={() => filter(category) } className="toggle-button ">
+                    return <button type="button" onClick={() => filter(category) } className="buttons ">
                         {category}
                     </button>
                 })

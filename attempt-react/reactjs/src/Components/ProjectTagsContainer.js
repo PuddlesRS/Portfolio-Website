@@ -9,22 +9,14 @@ import
 function ProjectTagsContainer({ menuItem })
 {
     return (
-        <div className="item">
-            {
                 menuItem.map((item) =>
                 {
-                    return <Link to={{ pathname: item.link }} target="_blank" >
-                        <div className="item-con" key={item.id}>
-                            <div className="item-container">
-                                <img src={item.image} alt="" />
-                                <h2>{item.title}</h2>
-                                <p>{item.text}</p>
-                            </div>
-                        </div>
+                    return <Link to={{ pathname: item.link }} target="_blank" className="project-item" key={item.id}>
+                        <img src={require(item.image)} alt={item.alt} className="item-img" />
+                            <h2 className="item-title">{item.title}</h2>
+                            <p className="item-descrip">{item.text}</p>
                     </Link>
                 })
-            }
-        </div>
     )
 }
 

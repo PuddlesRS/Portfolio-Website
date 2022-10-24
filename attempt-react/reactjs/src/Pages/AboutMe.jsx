@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import SocialsContainer from "./SocialsContainer";
-import socials from "./SocialsData";
+import SocialsContainer from "../Components/SocialsContainer";
+import socials from "../Components/SocialsData";
 
-function AboutMeGrid()
+function AboutMe()
 {
     const [socialsItem, setSocialsItem] = useState(socials);
 
     return (
-        <div className="resume-grid-container">
+        <div className="content">
             <p>"My name is Ryan Smith. I am a self taught developer currently living in the Dallas/Fort Worth Metroplex.
                 I am passionate about creating valuable experiences and have backgrounds in a variety of technological
                 disciplines." </p>
@@ -17,4 +17,6 @@ function AboutMeGrid()
     );
 };
 
-export default AboutMeGrid;
+
+
+export default AboutMe;

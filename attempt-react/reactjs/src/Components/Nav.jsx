@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, Outlet } from "react-router-dom";
-
 function Nav() {
     return (
         <>
@@ -18,8 +17,8 @@ function Nav() {
 
 function Navbar(props) {
     return (
-        <nav className="navbar">
-            <ul className="navbar-nav"> {props.children} </ul>
+        <nav className="navbar-container">
+            <ul className="navbar"> {props.children} </ul>
         </nav>
         );
 }
