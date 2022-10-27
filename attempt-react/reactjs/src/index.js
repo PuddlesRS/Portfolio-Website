@@ -6,8 +6,11 @@ import './index.scss';
 import './Fonts/SourceSansPro-SemiBold.ttf';
 import Index from "./Pages/IndexPage.js";
 import Resume from "./Pages/Resume.jsx";
-import Projects from './Pages/Projects.jsx';
+import ProjectsPage from './Pages/ProjectsPage.jsx';
 import AboutMe from './Pages/AboutMe.jsx';
+import DoesNotExist from './Pages/DoesNotExist.js';
+import IndProjects from './Pages/IndProjects';
+import { Helmet } from 'react-helmet';
 
 function Grid()
 {
@@ -22,15 +25,19 @@ function Grid()
 
 export default function App() {
     return (
-    <>
+        <>
+            <Helmet>
+                <title>Ryan Smith - Portfolio</title>
+            </Helmet>
         <BrowserRouter className="nav-router">
             <Routes>
                 <Route path="/" element={<Nav />}>
                     <Route index element={<Index />} />
-                    <Route path="projects" element={<Projects />} />
-                    < Route path="resume" element={<Resume />} />
-                    <Route path="about-me" element={<AboutMe  />} />
-                    <Route path="*" element={"" } />
+                        <Route path="projects" element={<ProjectsPage />} />
+                        <Route exact path='/:id' exact element={<IndProjects />} />
+                    <Route path="resume" element={<Resume />} />
+                    <Route path="about-me" element={<AboutMe />} />
+                    <Route path="*" element={<DoesNotExist /> } />
                  </Route>
             </Routes>
         </BrowserRouter>

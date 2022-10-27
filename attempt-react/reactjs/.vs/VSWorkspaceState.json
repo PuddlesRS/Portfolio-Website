@@ -5,8 +5,10 @@
     "\\src",
     "\\src\\Components",
     "\\src\\images",
-    "\\src\\Pages"
+    "\\src\\images\\projectimages",
+    "\\src\\Pages",
+    "\\src\\projectStylesheets"
   ],
-  "SelectedNode": "\\src\\Components\\ProjectsData.js",
+  "SelectedNode": "\\src\\Pages\\IndProjects.js",
   "PreviewInSolutionExplorer": false
 }

@@ -1,5 +1,5 @@
 $main-text-color: #F9f9f9;
-$default-button-color: #212121;
+$default-button-color: #1f1e1d;
 $button-text-color: #f77d31;
 $active-button-color: #f77d31;
 
@@ -8,118 +8,24 @@ $active-button-color: #f77d31;
     src: local("sourcesansprosemibold"), url('./Fonts/SourceSansPro-SemiBold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: "sourcesansproregular";
+    src: local("sourcesansproregular"), url('./Fonts/SourceSansPro-Regular.ttf') format('truetype');
+}
+
 root{
     height:100%;
 }
 
 html{
-    height:100%;
     overflow-y:scroll;
 }
 
 body {
-    height: 100%;
     font-family: 'sourcesansprosemibold';
     margin: 0;
-    background-color: #212121;
-}
-
-.grid-container {
-    display: grid;
-    height: 100%;
-    grid-template-areas: 'header' 'sub-header' 'content';
-    grid-template-rows: 10% 10% 80%;
-    justify-items:center;
-    align-items:center;
-}
-
-.navbar-container {
-    height: 100%;
-    width: 95%;
-}
-
-.navbar {
-    grid-area: header;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    width: 95%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    margin:0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    list-style: none;
-    padding: 1%;
-
-    a:link {
-        color: #ffffff;
-        font-size: 35px;
-        text-decoration: none;
-    }
-
-    a:hover {
-        color: #ff9354;
-        text-decoration: underline 2px;
-    }
-
-    a:active {
-        color: #ffffff;
-        text-decoration: none;
-    }
-
-    a:visited {
-        color: #ffffff;
-        font-size: 35px;
-        text-decoration: none;
-    }
-}
-
-.sub-header{
-    height: 100%;
-    width:100%;
-}
-
-.content{
-    display:flex;
-    grid-area: content;
-    height: 100%;
-    width: 100%;
-    align-items:center;
-    justify-content:center;
-}
-
-.title-container {
-    width: 100%;
-    text-align: center;
-    align-self:center;
-    justify-self:center;
-    margin: 30vh 0 0 0;
-
-    h1 {
-        margin: 0px;
-        font-size: 150px;
-        padding: 0;
-        color: $main-text-color;
-    }
-
-    h2 {
-        font-weight: lighter;
-        justify-self: center;
-        align-self: center;
-        margin: 0;
-        font-size: 40px;
-        color: $main-text-color;
-    }
-}
-
-.toggle-container{
-    display:flex;
-    flex-direction: row;
-    align-content:center;
-    justify-content:center;
+    background-color: #0f0f0f;
+    color: $main-text-color;
 }
 
 a:hover {
@@ -132,10 +38,13 @@ a:hover {
     color: $button-text-color;
     width: 10%;
     height: 50px;
-    margin: 2.5% 2% 2.5% 2%;
+    margin: 0;
     font-size: 18px;
-    padding: 5px 0 5px 0;
+    padding: 5px 20px 5px 20px;
     border-radius: 4px;
+    margin: 0 2% 0 2%;
+    min-width: 200px;
+    align-self: center;
 
     &:hover {
         background-color: #ff9354;
@@ -155,34 +64,180 @@ a:hover {
     }
 }
 
+.grid-container {
+    display: grid;
+    height: 100%;
+    grid-template-areas: 'header' 'sub-header' 'content';
+    grid-template-rows: 10vh 10vh auto;
+    justify-items:center;
+    align-items:center;
+}
+
+.navbar-container {
+    grid-area: header;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+    .navbar {
+        grid-area: header;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        justify-items: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        list-style: none;
+        padding: 1%;
+        background-color: $default-button-color;
+        margin: 0;
+        padding: 0;
+
+        nav-item {
+            height: 100%;
+        }
+
+        a:link {
+            color: #ffffff;
+            font-size: 35px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ff9354 !important;
+            text-decoration: underline 2px;
+        }
+
+        a:active {
+            color: #ffffff !important;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #ffffff;
+            font-size: 35px;
+            text-decoration: none;
+        }
+    }
+}
+
+.sub-header {
+    grid-area: sub-header;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    grid-area: content;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+//homepage
+.title-container {
+    display:grid;
+    grid-template-areas: "name" "titles";
+    grid-template-rows: 60% 40%;
+    height: 300px;
+    width: 45%;
+    min-width: 850px;
+    text-align: center;
+    margin: 20vh 0 0 0;
+    border-radius: 8px;
+
+    h1 {
+        grid-area:name;
+        margin: 0px;
+        font-size: 150px;
+        padding: 0;
+        color: $main-text-color;
+    }
+
+    h2 {
+        grid-area:titles;
+        font-weight: lighter;
+        justify-self: center;
+        align-self: center;
+        margin: 0;
+        font-size: 40px;
+        color: $main-text-color;
+    }
+}
+
+//projects
+.toggle-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content:center;
+    height:100%;
+    width:45%;
+    min-width: 800px;
+
+    .buttons{
+
+    }
+}
+
 .projects-container {
     grid-area: content;
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 45%;
+
+    .project-item {
+        display: grid;
+        grid-template-areas: "image item-title" "image item-descrip";
+        grid-template-columns: 250px 70%;
+        grid-template-rows: 35% 65%;
+        margin: 0 0 4vh 0;
+        height: 200px;
+        min-width: 800px;
+        border-radius: 8px;
+        background-color: $default-button-color;
+        align-self:center;
+    }
+
+    a {
+        text-decoration: none;
+        color: $main-text-color;
+
+        &:hover {
+            color: $active-button-color;
+        }
+    }
+
+    .item-img {
+        grid-area: image;
+        height: 100%;
+        width: 100%;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .item-title {
+        grid-area: item-title;
+        padding: 0 0 0 2.5%;
+    }
+
+    .item-descrip {
+        grid-area: item-descrip;
+        padding: 0 0 0 2.5%;
+        align-self: start;
+        width: 100%;
+    }
 }
 
-.project-item{
-    display: grid;
-    grid-template-areas: "image item-title" "image item-descrip";
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 50% 50%;
-    margin: 5% 0 5% 0;
-    height: 200px;
-}
-
-.item-img{
-    grid-area:image;
-}
-
-.item-title {
-    grid-area: item-title;
-}
-
-.item-descrip {
-    grid-area: item-descrip;
-}
-
+//resume
 .resume-image {
     height: 1200px;
     place-self: center;
@@ -195,4 +250,47 @@ a:hover {
     width: 100%;
     align-content: center;
     justify-content: center;
+}
+
+//about-me
+.about-container {
+    display: grid;
+    grid-template-areas: "image desc" "image socials";
+    grid-template-rows: 70% 30%;
+    grid-template-columns: 35% 65%;
+    width: 45%;
+    min-width: 800px;
+    height: 250px;
+    background-color: $default-button-color;
+    border-radius:8px;
+
+    .about-pic {
+        grid-area: image;
+        border-radius: 50%;
+        height: 200px;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .about-descrip {
+        grid-area: desc;
+        color: $main-text-color;
+        padding: 20px 15px 0 15px;
+        font-size: 18px;
+        font-family:sourcesansproregular;
+        font-weight:lighter;
+    }
+
+    .socials-container {
+        grid-area: socials;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .socials-logos {
+            height: 40px;
+            width: 45px;
+            margin: 0 30px 0 30px;
+        }
+    }
 }

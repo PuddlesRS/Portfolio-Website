@@ -7,7 +7,7 @@ import ToggleButtons from '../Components/ToggleButtons';
 const allCategories = ['All', ...new Set(items.map(item => item.category))];
 console.log(allCategories);
 
-function Projects()
+function ProjectsPage()
 {
     const [menuItem, setMenuItem] = useState(items);
     const [buttons, setButtons] = useState(allCategories);
@@ -41,4 +41,4 @@ function Projects()
     );
 }
 
-export default Projects;
+export default ProjectsPage;
