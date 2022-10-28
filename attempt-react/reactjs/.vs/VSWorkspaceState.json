@@ -6,9 +6,10 @@
     "\\src\\Components",
     "\\src\\images",
     "\\src\\images\\projectimages",
+    "\\src\\images\\projectimages\\techhaven",
     "\\src\\Pages",
     "\\src\\projectStylesheets"
   ],
-  "SelectedNode": "\\src\\Pages\\IndProjects.js",
+  "SelectedNode": "\\src\\Components\\ProjectsData.js",
   "PreviewInSolutionExplorer": false
 }
